@@ -1,19 +1,19 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Pizza from "./pizza";
+import PizzaOfTheDay from "./PizzaOfTheDay";
+import Order from "./Order";
 
 const App = () => {
   return (
-    <div>
+    <StrictMode>
 
-      <h1>Padre Gino's - Order Now</h1>
-
-      <Pizza name="Pepperoni" description="pep, cheese, n stuff"/>
-      <Pizza name="Hawaiian" description="ham, pineaaple, n stuff"/>
-      <Pizza name="Americano" description="french fries, n hot dogs"/>
- 
-
-    </div>
+      <div>
+        <h1>Padre Gino's - Order Now</h1>
+        <Order />
+        <PizzaOfTheDay />
+      </div>
+      
+    </StrictMode>
   )
 };
 

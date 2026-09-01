@@ -1,12 +1,13 @@
 import React from "react";
 
-const Pizza = (props) => {
+export default function Pizza(props){
     return(
         <div className="pizza">
             <h1>{props.name}</h1>
             <p>{props.description}</p>
+            <img src={props.image} alt={props.name} />
+
         </div>
     );
-};
-export default Pizza;
-// you have to export after the declaration as javascript executes from top to bottom
+}
+    // you have to export after the declaration as javascript executes from top to bottom
