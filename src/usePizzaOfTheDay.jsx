@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDebugValue} from "react";
 
 export const usePizzaOfTheDay = () => {
     const[pizzaOfTheDay, setPizzaOftheDay] = useState(null);
+
+    useDebugValue(pizzaOfTheDay ?`${pizzaOfTheDay.id} ${pizzaOfTheDay.name}`: "Loading....",);
 
     useEffect(() => {
         async function fetchPizzaOfTheDay() {
@@ -14,3 +16,5 @@ export const usePizzaOfTheDay = () => {
 
     return pizzaOfTheDay;
 };
+
+//debugValue is only for developer tools
